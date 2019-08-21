@@ -6,8 +6,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <header>
+      <div id="topBar">
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <label class="titulo">Cifrar significa codificar.</label>
+        <p>A <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank" title="cifra de césar">cifra de
+      César</a> é um dos primeiros tipos de criptografias conhecidas na história.</p>
+        <p>O imperador romano Júlio César utilizava essa cifra para enviar ordens secretas aos seus generais no campo de
+      batalha.</p>
+       <p>A cifra de César é uma das técnicas mais simples de cifrar uma mensagem.</p><p> É um
+       tipo de cifra por substituição, em que cada letra do texto original é
+       substituida por outra que se encontra há um número fixo de posições
+       (deslocamento) mais a frente do mesmo alfabeto.</p>
+      </div>
+    </main>
+    <div id="rootCriptografia">
+      <h1>criptografia</h1>
+      <form>
+        <input type="text" id="nome" placeholder="Insira um nome aqui." required/>
+      </br>
+        <input type="number" id="offset" placeholder="sua chave aqui">
+      </br>
+        <button type="button" onclick="encode()">Criptografar</button>
+      </form>
+    </div>
+    <div id="rootDescriptografia">
+      <h1>descriptografia</h1>
+      <form>
+        <input type="text" id="descriptografado" readonly>
+      </br>
+        <button type="button" action="decode()">descriptografar</button>
+      </form>
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

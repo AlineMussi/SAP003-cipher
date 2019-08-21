@@ -1,0 +1,50 @@
+body{
+  background-image: url("background.jpg");
+  background-size: cover
+  font-family: helvetica;
+  color: gray;
+}
+#content{
+  background-color: white;
+  height: 180px;
+  text-align: center;
+  margin-left: -10px;
+  margin-right:-8px;
+  margin-top: 4%;
+}
+
+.titulo{
+  font-size: 150%;
+  margin-top: 35px;
+}
+
+#rootCriptografia{
+  margin: auto;
+  margin-top: 5%;
+  border: 1px solid gray;
+  width:220px;
+  height:140px;
+  text-align:center;
+  background-color: white;
+}
+
+
+#rootDescriptografia{
+  margin: auto;
+  margin-top: 5%;
+  border: 1px solid gray;
+  width:220px;
+  height:140px;
+  text-align:center;
+  background-color: white;
+}
+h1{
+  text-align: center;
+}
+#nome{
+  width: 95%;
+  height: auto;
+}
+button{
+  margin-top: 5%;
+}
