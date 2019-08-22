@@ -1,40 +1,35 @@
 
 window.cipher = {
-  encode:    function() {
+  encode: encode,
+  decode: decode,
+}
 
-    let nome = document.getElementById('nome').value;
-    let intervalo = Number (document.getElementById('offset').value);
-    let retorna ="";
 
-      for ( i = 0; i < nome.length; i++) {
-        let char = nome[i].charCodeAt();
-        retorna+=String.fromCharCode(char + intervalo);
-      }
+function encode(nome,intervalo){
+  let nameUpper = nome.toUpperCase();
+  let armazenaCifra ="";
 
-      alert('Sua criptografia é ' + retorna);
-
-},
-decode:  function() {
-
-    let nome = document.getElementById('nome').value;
-    let intervalo = Number(document.getElementById('offset').value);
-    let retorna="";
-
-    for (i = 0; i < nome.length; i++) {
-      let char = nome[i].charCodeAt();
-      retorna+=String.fromCharCode(char - intervalo);
-    }
-
-    document.getElementById('descriptografado').value=retorna;
+  for (let i = 0; i < nome.length; i++) {
+    let char = (((nameUpper.charCodeAt(i) - 65 + intervalo)% 26)+65);
+    armazenaCifra+=String.fromCharCode(char);
   }
+  return armazenaCifra;
+
+  //alert('Sua criptografia é ' + retorna);
+}
+
+function decode(nome, intervalo) {
+  //let nameUpper = nome.toUpperCase();
+  let retornaDeco="";
+
+  for (let i = 0; i < nome.length; i++) {
+    let char = (((nameUpper.charCodeAt(i) - 90 - intervalo)% 26)+90);
+    retornaDeco+=String.fromCharCode(char);
+  }
+  return retornaDeco;
 }
 
 
-
-
-encode: function(){
-
-}
 
 
 
