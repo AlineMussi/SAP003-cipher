@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Caesar Cipher</title>
+  <title>Cifra de César</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,28 +15,36 @@
   </header>
   <main>
     <div id="content">
+      <h1>Use a Cifra de César para garantir sua identidade.</h1>
+      <hr/>
       <label class="titulo">Cifrar significa codificar.</label>
-      <p>A <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank" title="cifra de césar">cifra de
-        César</a> é um dos primeiros tipos de criptografias conhecidas na história.</p>
-        <p>O imperador romano Júlio César utilizava essa cifra para enviar ordens secretas aos seus generais no campo de
-          batalha.</p>
-          <p>A cifra de César é uma das técnicas mais simples de cifrar uma mensagem.</p><p> É um
-            tipo de cifra por substituição, em que cada letra do texto original é
-            substituida por outra que se encontra há um número fixo de posições
-            (deslocamento) mais a frente do mesmo alfabeto.</p>
-          </div>
-        </main>
-        <div id="rootCriptografia">
-          <h1>Cifrar</h1>
-          <form>
-            <input type="text" id="nome" placeholder="Insira um nome aqui." required/>
-          </br>
-          <input type="number" id="offset" placeholder="sua chave aqui">
-        </br>
-        <button type="button" onclick="criptografar()">Criptografar</button>
+      <p><b>De forma simples, a criptografia é um conjunto de técnicas pensadas para proteger uma informação ou identidade, de modo que apenas o emissor e receptor consigam compreendê-la.
+
+      É uma técnica que existe desde a antiguidade, com o primeiro sistema de criptografia conhecido tendo surgido no Egito, cerca de 1.900 A.C.
+
+      Foi eleita a Criptografia de César, como ferramenta para garantir a comunicação segura.  É um tipo de cifra por substituição, em que cada letra do texto original é substituida por outra que se encontra há um número fixo de posições(deslocamento) mais a frente do mesmo alfabeto.</p>Clique no <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank" title="cifra de césar">link</a> para saber mais.</b></p>
+      </div>
+    </main>
+    <br/>
+  <hr/>
+    <section>
+      <label class="titulo">Protocolo de Segurança de Informações</label>
+    <p><b>Um programa efetivo de <i>Compliance</i>, oferece meios para denúncia de        ocorrências ou suspeitas do descumprimento de regras.
+
+      Seguindo o nosso <u>Protocolo de Segurança de Informações(PSI)</u>, utilize a Cifra de César para proteger a sua identidade, no <i>Canal Compliance</i> da <span>Empresa Lorem Ipsum.</span>
+      Adquira sua chave numérica <u>com o seu Gestor</u> e a insira após seu último nome, nos respectivos campos da tabela abaixo:</b></p>
+    </section>
+    <div id="rootCriptografia">
+      <h1>Cifrar</h1>
+      <form>
+        <input type="text" id="nome" maxlength="12" placeholder="Insira seu último nome aqui." required/>
       </br>
-    </form>
+      <input type="number" id="offset" placeholder="Sua chave aqui">
+    </br>
+    <button type="button" onclick="criptografar()">Criptografar</button>
   </br>
+</form>
+</br>
 </br>
 <input type="text" id="criptografia" required>
 <form>

@@ -19,7 +19,7 @@ function encode(nome,intervalo){
 }
 
 function decode(nome, intervalo) {
-  //let nameUpper = nome.toUpperCase();
+  let nameUpper = nome.toUpperCase();
   let retornaDeco="";
 
   for (let i = 0; i < nome.length; i++) {

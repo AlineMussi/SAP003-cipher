@@ -1,22 +1,33 @@
 body{
-  background-image: url("background.jpg");
-  background-size: cover
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+  background-color: #fcba03;
+  height: 5px;
+  margin-top: -15px;
+  margin-left: -10px;
+  margin-right: -8px;
+  background-size: cover;
   font-family: helvetica;
-  color: gray;
+}
+
+hr{
+  width: 50%;
+  text-align: center;
 }
 #content{
-  background-color: white;
+
   height: 180px;
   text-align: center;
-  margin-left: -10px;
-  margin-right:-8px;
-  margin-top: 4%;
+  margin-left: 30px;
+  margin-right:20px;
+  margin-top: 10%;
 }
 
 .titulo{
   font-family: helvetica;
   font-size: 200%;
   margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 #rootCriptografia{
@@ -24,10 +35,13 @@ body{
   margin: auto;
   margin-top: 50px;
   border-radius: 6px;
+  border: 1px solid gray;
   width:300px;
-  height:400px;
+  height:330px;
   text-align:center;
   background-color: white;
+  color: #262624;
+
 }
 
 #rootDescriptografia{
@@ -41,6 +55,8 @@ body{
 }
 h1{
   text-align: center;
+  margin-bottom: 5%;
+
 }
 #nome{
   width: 95%;
@@ -53,6 +69,7 @@ button{
 }
 
 #key{
+
     border-radius: 6px;
 }
 #offset{
@@ -63,4 +80,18 @@ button{
 }
 #descriptografado{
     border-radius: 6px;
+}
+section{
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 30px;
+  margin-right:20px;
+}
+
+span{
+  background-color: #ffff00;
+}
+
+input{
+  text-align: center;
 }
