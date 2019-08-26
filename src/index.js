@@ -1,24 +1,16 @@
-function criptografar() {
-  event.preventDefault();
-  let nome = document.getElementById('nome').value;
-  let intervalo = Number (document.getElementById('offset').value);
+const Criptografia = () =>{
+  const name = (document.getElementById("nome").value);
+  const intervalo = Number (document.getElementById("offset").value);
+  const armazenaCifra=window.cipher.encode(intervalo, name);
+  document.getElementById("criptografia").value=armazenaCifra;
+};
 
-  let armazenaCifra=window.cipher.encode(nome,intervalo);
+const Descriptografar = () => {
+  const name = (document.getElementById("nome").value);
+  const intervalo = Number(document.getElementById("offset").value);
+  const retornaDeco=window.cipher.decode(intervalo, name);
+  document.getElementById("criptografia").value=retornaDeco;
+};
 
-  document.getElementById('criptografia').value=armazenaCifra;
-
-
-
-}
-
-function descriptografar() {
-  event.preventDefault();
-  let nome = document.getElementById('nome').value;
-  let intervalo = Number(document.getElementById('offset').value);
-
-  let retornaDeco=window.cipher.decode(nome,intervalo);
-
-  document.getElementById('descriptografado').value=retornaDeco;
-
-
-}
+document.getElementById("criptografar").addEventListener("click", Criptografia);
+document.getElementById("descriptografar").addEventListener("click", Descriptografar);

@@ -6,9 +6,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
   <header>
     <div id="topBar">
     </div>
@@ -41,18 +38,18 @@
       </br>
       <input type="number" id="offset" placeholder="Sua chave aqui">
     </br>
-    <button type="button" onclick="criptografar()">Criptografar</button>
+    <button type="button" id="criptografar" >Criptografar</button>
   </br>
+  <button type="button" id="descriptografar">Descriptografar</button>
 </form>
 </br>
 </br>
-<input type="text" id="criptografia" required>
-<form>
-  <button type="button" onclick="descriptografar()">Descriptografar</button>
-</form>
+<input type="text" id="criptografia" readonly>
 </br>
 </br>
-<input type="text" id="descriptografado" readonly>
+<!--<input type="text" id="descriptografado" readonly>-->
 </div>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

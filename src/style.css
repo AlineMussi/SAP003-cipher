@@ -37,7 +37,7 @@ hr{
   border-radius: 6px;
   border: 1px solid gray;
   width:300px;
-  height:330px;
+  height:290px;
   text-align:center;
   background-color: white;
   color: #262624;
@@ -63,7 +63,7 @@ h1{
   height: auto;
   border-radius: 6px;
 }
-button{
+input{
   margin-top: 5%;
   border-radius: 6px;
 }

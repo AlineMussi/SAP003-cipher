@@ -1,43 +1,25 @@
+const encode = (intervalo, name) => {
+  let armazenaCifra ="";
+  for (let i = 0; i < name.length; i++) {
+    let char = (((name.charCodeAt(i) - 65 + intervalo)% 26)+65);
+    armazenaCifra+=String.fromCharCode(char);
+  }
+  return armazenaCifra;
+};
+
+const decode = (intervalo, name) => {
+  let retornaDeco="";
+  for (let i = 0; i < name.length; i++) {
+    let char = (((name.charCodeAt(i) - 90 - intervalo)% 26)+90);
+    retornaDeco+=String.fromCharCode(char);
+  }
+  return retornaDeco;
+};
 
 window.cipher = {
   encode: encode,
   decode: decode,
-}
-
-
-function encode(nome,intervalo){
-  let nameUpper = nome.toUpperCase();
-  let armazenaCifra ="";
-
-  for (let i = 0; i < nome.length; i++) {
-    let char = (((nameUpper.charCodeAt(i) - 65 + intervalo)% 26)+65);
-    armazenaCifra+=String.fromCharCode(char);
-  }
-  return armazenaCifra;
-
-  //alert('Sua criptografia é ' + retorna);
-}
-
-function decode(nome, intervalo) {
-  let nameUpper = nome.toUpperCase();
-  let retornaDeco="";
-
-  for (let i = 0; i < nome.length; i++) {
-    let char = (((nameUpper.charCodeAt(i) - 90 - intervalo)% 26)+90);
-    retornaDeco+=String.fromCharCode(char);
-  }
-  return retornaDeco;
-}
-
-
-
-
-
-
-
-
-
-
+};
 /*function(offset) {
 
     let name  = document.getElementById('nome').value;
@@ -67,16 +49,9 @@ function decode(nome, intervalo) {
   }
 };
 
-
-
-
-/*
-
-
-let myFunction = function(offset,string) {
+/*let myFunction = function(offset,string) {
   alert("seu nome descriptografado é ");
 }
-
 
 let myFunction = offset,string => {
   alert("seu nome descriptografado é ");
