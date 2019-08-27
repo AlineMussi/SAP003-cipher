@@ -1,19 +1,31 @@
 const encode = (intervalo, name) => {
   let armazenaCifra ="";
   for (let i = 0; i < name.length; i++) {
-    let char = (((name.charCodeAt(i) - 65 + intervalo)% 26)+65);
-    armazenaCifra+=String.fromCharCode(char);
+    if(name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90){
+      let char = (((name.charCodeAt(i) - 65 + intervalo) % 26)+65);
+      armazenaCifra+=String.fromCharCode(char);
+      return armazenaCifra;
+    } else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
+        let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+97);
+        armazenaCifra+=String.fromCharCode(char);
+        return armazenaCifra;
+    }
   }
-  return armazenaCifra;
 };
 
 const decode = (intervalo, name) => {
   let retornaDeco="";
   for (let i = 0; i < name.length; i++) {
-    let char = (((name.charCodeAt(i) - 90 - intervalo)% 26)+90);
-    retornaDeco+=String.fromCharCode(char);
+    if(name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90){
+      let char = (((name.charCodeAt(i) - 90 - intervalo) % 26)+90);
+      retornaDeco+=String.fromCharCode(char);
+      return retornaDeco;
+    } else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
+        let char = (((name.charCodeAt(i) - 97 - intervalo) % 26)+97);
+        retornaDeco+=String.fromCharCode(char);
+        return retornaDeco;
+    }
   }
-  return retornaDeco;
 };
 
 window.cipher = {
