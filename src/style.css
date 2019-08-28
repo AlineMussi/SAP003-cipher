@@ -1,12 +1,5 @@
 body{
-  background-image: url("banner.jpg");
-  background-repeat: no-repeat;
   background-color: #fcba03;
-  height: 5px;
-  margin-top: -15px;
-  margin-left: -10px;
-  margin-right: -8px;
-  background-size: cover;
   font-family: helvetica;
 }
 
@@ -15,83 +8,58 @@ hr{
   text-align: center;
 }
 #content{
-
-  height: 180px;
+  filter: brightness(110%) grayscale(60%);
+  margin-top:-22px;
+  margin-left: -10px;
+  margin-right: -8px;
+  background-size: cover;
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+  height: 500px;
   text-align: center;
-  margin-left: 30px;
-  margin-right:20px;
-  margin-top: 10%;
 }
 
 .titulo{
-  font-family: helvetica;
   font-size: 200%;
-  margin-top: 35px;
-  margin-bottom: 20px;
 }
 
 #rootCriptografia{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-family: helvetica;
   margin: auto;
-  margin-top: 50px;
-  border-radius: 6px;
-  border: 1px solid gray;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 5px double grey ;
   width:300px;
-  height:290px;
+  height:260px;
   text-align:center;
   background-color: white;
   color: #262624;
-
 }
 
-#rootDescriptografia{
-  margin: auto;
-  margin-top: 5%;
-  border-radius: 6px;
-  width:300px;
-  height:300px;
-  text-align:center;
-  background-color: white;
-}
 h1{
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 30px;
 
 }
 #nome{
-  width: 95%;
-  height: auto;
-  border-radius: 6px;
+  width: 170px;
+  border-radius: 10px;
 }
 input{
   margin-top: 5%;
-  border-radius: 6px;
-}
-
-#key{
-
-    border-radius: 6px;
+  border-radius: 10px;
+  text-align: center;
 }
 #offset{
-    border-radius: 6px;
-}
-#criptografia{
-    border-radius: 6px;
-}
-#descriptografado{
-    border-radius: 6px;
-}
-section{
-  text-align: center;
-  margin-top: 120px;
-  margin-left: 30px;
-  margin-right:20px;
+    width: 55px;
 }
 
 span{
   background-color: #ffff00;
 }
 
-input{
-  text-align: center;
+button{
+  border-radius: 10px;
+  margin-top: 5%;
 }

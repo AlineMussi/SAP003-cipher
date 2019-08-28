@@ -2,14 +2,25 @@ const encode = (intervalo, name) => {
   let armazenaCifra ="";
   for (let i = 0; i < name.length; i++) {
     if(name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90){
-      let char = (((name.charCodeAt(i) - 65 + intervalo) % 26)+65);
-      armazenaCifra+=String.fromCharCode(char);
+      if (intervalo<0 ){
+        let char = (((name.charCodeAt(i) + 65 + intervalo) % 26)+65);
+        armazenaCifra+=String.fromCharCode(char);
+      } else if (intervalo>0) {
+        let char = (((name.charCodeAt(i) - 65 + intervalo) % 26)+65);
+        armazenaCifra+=String.fromCharCode(char);
+      }
     }
-     else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
-      let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+97);
-      armazenaCifra+=String.fromCharCode(char);
+    else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
+      if (intervalo<0 ){
+        let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+
+        (name.charCodeAt(i) == 97 ? 123 : 97));
+        armazenaCifra+=String.fromCharCode(char);
+      } else if (intervalo>0) {
+        let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+97);
+        armazenaCifra+=String.fromCharCode(char);
+      }
     }
-  else {
+  else{
     let char = (name.charCodeAt(i));
     armazenaCifra+=String.fromCharCode(char);
   }

@@ -46,7 +46,11 @@ a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
 ## 2. Resumo do projeto
 
-O que eu tenho que fazer exatamente? Neste projeto você criará a primeira
+  No âmbito institucional e corporativo, compliance é o conjunto de disciplinas a fim de cumprir e se fazer cumprir as normas legais e regulamentares, as políticas e as diretrizes estabelecidas para o negócio e para as atividades da instituição ou empresa, bem como evitar, detectar e tratar quaisquer desvios ou inconformidades que possam ocorrer.
+
+O termo compliance tem origem no verbo em inglês to comply, que significa agir de acordo com uma regra, uma instrução interna, um comando ou um pedido. Visando o cumprimento de regulamentos e protocolos padrões, a empresa Lorem Ipsum, inseriu o programa Compliance, onde seus colaboradores tem a orientação de notificar os eventos adversos e não-conformes. Porém, para evitar constrangimentos, manter o bem-estar e preservar a identidade do profissional que utilizou o meio, foi observada a necessidade de criar uma cifra individual.
+
+<!--O que eu tenho que fazer exatamente? Neste projeto você criará a primeira
 aplicação web do _bootcamp_. Nela o usuário poderá cifrar e decrifrar um texto
 indicando a chave de deslocamento (_offset_).
 
@@ -58,7 +62,7 @@ exemplo:
 * Mensagens secretas para alguma pessoa.
 * Ferramenta de mensagens internas de uma organização em uma zona de conflito.
 * Cifrar cartões de crédito.
-* Criar senhas seguras para email.
+* Criar senhas seguras para email.-->
 
 ## 3. Objetivos de aprendizagem
 
@@ -105,12 +109,19 @@ definir o produto final a nível de expriência e interface.
 
 A interface deve permitir ao usuário:
 
+* Após receber do seu gestor a chave(_offset_) indicando quantas posições de deslocamento de caracteres deseja para cifrar;
+* Inserir seu último sobrenome no primeiro campo _"Insira seu último nome aqui"_;
+* Quando necessário, o Gestor, utilizará o Botão _descriptografar_, com a mesma chave que enviou a seu(s) colaborador(es), afim de contatar o relator para apuração dos dados notificados no Canal Compliance;
+* Esta chave poderá ser alterada pelo Gestor com regularidade, obedecendo o Protocolo de Segurança Institucional.
+
+/*A interface deve permitir ao usuário:
+
 * Eleger um _offset_ indicando quantas posições de deslocamento de caracteres
   quer que a cifra utilize.
 * Inserir uma mensagem (texto) para ser cifrada.
 * Ver o resultado da mensagem cifrada.
 * Inserir uma mensagem (texto) para ser decifrada.
-* Ver o resultado da mensagem decifrada.
+* Ver o resultado da mensagem decifrada.*/
 
 ### Scripts / Arquivos
 
