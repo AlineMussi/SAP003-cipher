@@ -15,7 +15,7 @@ hr{
   background-size: cover;
   background-image: url("banner.jpg");
   background-repeat: no-repeat;
-  height: 500px;
+  height: 430px;
   text-align: center;
 }
 
@@ -35,6 +35,10 @@ hr{
   text-align:center;
   background-color: white;
   color: #262624;
+}
+
+#criptografia{
+  width: 300px;
 }
 
 h1{

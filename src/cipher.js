@@ -1,51 +1,59 @@
 const encode = (intervalo, name) => {
   let armazenaCifra ="";
   for (let i = 0; i < name.length; i++) {
-    if(name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90){
-      if (intervalo<0 ){
+    if (name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90) {
+      if (intervalo<0 ) {
         let char = (((name.charCodeAt(i) + 65 + intervalo) % 26)+65);
         armazenaCifra+=String.fromCharCode(char);
-      } else if (intervalo>0) {
+      } else {
         let char = (((name.charCodeAt(i) - 65 + intervalo) % 26)+65);
         armazenaCifra+=String.fromCharCode(char);
       }
     }
-    else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
-      if (intervalo<0 ){
-        let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+
-        (name.charCodeAt(i) == 97 ? 123 : 97));
+    else if (name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122) {
+      if (intervalo<0 ) {
+        let char = (((name.charCodeAt(i) - 122 + intervalo) % 26)+122);
         armazenaCifra+=String.fromCharCode(char);
-      } else if (intervalo>0) {
+      } else {
         let char = (((name.charCodeAt(i) - 97 + intervalo) % 26)+97);
         armazenaCifra+=String.fromCharCode(char);
       }
     }
-  else{
-    let char = (name.charCodeAt(i));
-    armazenaCifra+=String.fromCharCode(char);
+    else {
+      let char = (name.charCodeAt(i));
+      armazenaCifra+=String.fromCharCode(char);
+    }
   }
-}
   return armazenaCifra;
 };
 
 const decode = (intervalo, name) => {
-  let retornaDeco="";
+  let armazenaCifra="";
   for (let i = 0; i < name.length; i++) {
-    if(name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90){
-      let char = (((name.charCodeAt(i) - 90 - intervalo) % 26)+90);
-      retornaDeco+=String.fromCharCode(char);
-
-    } else if(name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122){
+    if (name.charCodeAt(i) >=65 && name.charCodeAt(i) <=90) {
+      if (intervalo<0 ) {
+        let char = (((name.charCodeAt(i) + 65 - intervalo) % 26) +65);
+        armazenaCifra+=String.fromCharCode(char);
+      } else {
+        let char = (((name.charCodeAt(i) - 90 - intervalo) % 26) +90);
+        armazenaCifra+=String.fromCharCode(char);
+      }
+    }
+    else if (name.charCodeAt(i) >=97 && name.charCodeAt(i) <=122) {
+      if (intervalo<0 ) {
         let char = (((name.charCodeAt(i) - 97 - intervalo) % 26)+97);
-        retornaDeco+=String.fromCharCode(char);
-
+        armazenaCifra+=String.fromCharCode(char);
+      } else {
+        let char = (((name.charCodeAt(i) - 122 - intervalo) % 26)+122);
+        armazenaCifra+=String.fromCharCode(char);
+      }
     }
     else {
       let char = (name.charCodeAt(i));
-      retornaDeco+=String.fromCharCode(char);
+      armazenaCifra+=String.fromCharCode(char);
     }
   }
-    return retornaDeco;
+  return armazenaCifra;
 };
 
 window.cipher = {
