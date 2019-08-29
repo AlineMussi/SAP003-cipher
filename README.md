@@ -8,7 +8,8 @@ Projeto apresentado à Laboratória-Brasil. A partir da situação problema prop
 * [1. Prefácio](#1-prefácio)
 * [2. O problema](#)
 * [3. Solução](#)
-* [4. Considerações técnicas](#7-considerações-técnicas)
+* [4. Interface do usuário](#)  
+* [5. Considerações técnicas](#7-considerações-técnicas)
 
 
 ****
@@ -97,7 +98,7 @@ definir o produto final a nível de expriência e interface.
 * Quais são os objetivos do usuário em relação com o produto?
 * Como você acredita que o produto está resolvendo os problemas do usuário? -->
 
-## 3. Interface do usuário (UI)
+## 4. Interface do usuário (UI)
 
 A interface deve permitir ao usuário:
 
@@ -150,7 +151,7 @@ de partida para implementar o suporte para esses casos.
 Também não foi mencionado o que aconteceria com _offset_ negativo. Como parte da
 hacker edition te convidamos a explorar esse caso sozinha.-->
 
-## 4. Considerações técnicas
+## 5. Considerações técnicas
 
 A lógica do projeto foi baseada na Cifra de César - uma das técnicas mais antigas para codificar uma mensagem. É um tipo de cifra por substituição, em que cada letra do texto original é substituída por outra que se encontra há um número fixo de posições (deslocamento) mais a frente do mesmo alfabeto, criando assim mensagens criptografadas. Em uma troca de 1 posição, A se tornaria B, B se tornaria C e assim consecutivamente.
 O projeto foi implementado inteiramente em JavaScript(ES6), HTML5 e CSS.
