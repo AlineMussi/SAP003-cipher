@@ -1,23 +1,18 @@
 # Cifra de César
+Projeto apresentado à Laboratória-Brasil. A partir da situação problema proposta, criar uma aplicação que permita criptografar e descriptografar mensagens.
+
+![](src/web.jpeg)
 
 ## Índice
 
 * [1. Prefácio](#1-prefácio)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do
-  projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Avaliação](#8-avaliação)
-* [9. Guias, dicas e leituras
-  complementares](#9-guias-dicas-e-leituras-complementares)
-* [10. Checklist](#10-checklist)
+* [2. O problema](#)
+* [3. Solução](#)
+* [4. Considerações técnicas](#7-considerações-técnicas)
 
-***
 
-## 1. Prefácio
+****
+<!--## 1. Prefácio
 
 Cifrar significa codificar. A [cifra de
 César](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar) é um dos primeiros
@@ -30,25 +25,20 @@ batalha.
 A cifra de César é uma das técnicas mais simples de cifrar uma mensagem. É um
 tipo de cifra por substituição, em que cada letra do texto original é
 substituida por outra que se encontra há um número fixo de posições
-(deslocamento) mais a frente do mesmo alfabeto.
+(deslocamento) mais a frente do mesmo alfabeto.-->
 
-Por exemplo se usarmos o deslocamento (_offset_) de 3 posições:
+## 1. Prefácio
 
-* Alfabeto sem cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto com cifra:  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-* A letra A será D
-* A palavra CASA será FDVD
+No âmbito institucional e corporativo, Compliance é o conjunto de disciplinas a fim de cumprir e se fazer cumprir as normas legais e regulamentares, as políticas e as diretrizes estabelecidas para o negócio e para as atividades de uma instituição ou empresa, bem como evitar, detectar e tratar quaisquer desvios ou inconformidades que possam ocorrer.
 
-Atualmente todas as cifras de substituição alfabética simples, são decifradas
-com facilidade e não oferecem muita segurança na comunição, mas a cifra de César
-muitas vezes pode fazer parte de um sistema mais complexo de criptografia, como
-a cifra de Vigenère, e tem aplicação no sistema ROT13.
+## 2. O problema
 
-## 2. Resumo do projeto
+A empresa Lorem Ipsum, inseriu o programa Compliance, onde seus colaboradores tem a orientação de notificar os eventos adversos e não-conformes. Em contrapartida, houveram exposições de profissionais que relataram eventos no Canal.
 
-  No âmbito institucional e corporativo, compliance é o conjunto de disciplinas a fim de cumprir e se fazer cumprir as normas legais e regulamentares, as políticas e as diretrizes estabelecidas para o negócio e para as atividades da instituição ou empresa, bem como evitar, detectar e tratar quaisquer desvios ou inconformidades que possam ocorrer.
+## 3. Solução
 
-O termo compliance tem origem no verbo em inglês to comply, que significa agir de acordo com uma regra, uma instrução interna, um comando ou um pedido. Visando o cumprimento de regulamentos e protocolos padrões, a empresa Lorem Ipsum, inseriu o programa Compliance, onde seus colaboradores tem a orientação de notificar os eventos adversos e não-conformes. Porém, para evitar constrangimentos, manter o bem-estar e preservar a identidade do profissional que utilizou o meio, foi observada a necessidade de criar uma cifra individual.
+Após a análise do problema, para fins de evitar constrangimentos, manter o bem-estar e preservar a identidade do profissional que utilizou o meio, observou-se a necessidade de uma cifra individual.
+Foi criada uma aplicação web com a Criptografia de César como ferramenta para garantir a comunicação segura.
 
 <!--O que eu tenho que fazer exatamente? Neste projeto você criará a primeira
 aplicação web do _bootcamp_. Nela o usuário poderá cifrar e decrifrar um texto
@@ -64,7 +54,9 @@ exemplo:
 * Cifrar cartões de crédito.
 * Criar senhas seguras para email.-->
 
-## 3. Objetivos de aprendizagem
+<!--## 3. Objetivos de aprendizagem
+
+Neste projeto foi construído uma aplicação web que interaje com o usuário através do navegador, .
 
 Neste projeto você aprenderá a construir uma aplicação web que interaja com o
 usuário através do navegador e a lógica para essa interação. Em outras palavras,
@@ -80,9 +72,9 @@ você aprenderá:
 * Verificar a sua implementação com **provas unitárias**.
 * Entender as **necessidades do usuário** e propor soluções.
 * Organizar o seu tempo e priorizar tarefas em um ambiente de **alta
-  incerteza**.
+  incerteza**.-->
 
-## 4. Considerações gerais
+<!--## 4. Considerações gerais
 
 * Este projeto deve ser resolvido individualmente.
 * O projeto será entregue subindo o seu código no GitHub (commit/push) e o
@@ -103,27 +95,27 @@ definir o produto final a nível de expriência e interface.
 
 * Quem são os principais usuário do produto?
 * Quais são os objetivos do usuário em relação com o produto?
-* Como você acredita que o produto está resolvendo os problemas do usuário?
+* Como você acredita que o produto está resolvendo os problemas do usuário? -->
 
-### Interface do usuário (UI)
+## 3. Interface do usuário (UI)
 
 A interface deve permitir ao usuário:
 
 * Após receber do seu gestor a chave(_offset_) indicando quantas posições de deslocamento de caracteres deseja para cifrar;
-* Inserir seu último sobrenome no primeiro campo _"Insira seu último nome aqui"_;
+* Inserir seu último sobrenome no primeiro campo _"Insira o nome / criptografia"_;
 * Quando necessário, o Gestor, utilizará o Botão _descriptografar_, com a mesma chave que enviou a seu(s) colaborador(es), afim de contatar o relator para apuração dos dados notificados no Canal Compliance;
 * Esta chave poderá ser alterada pelo Gestor com regularidade, obedecendo o Protocolo de Segurança Institucional.
 
-/*A interface deve permitir ao usuário:
+<!--A interface permite ao usuário:
 
 * Eleger um _offset_ indicando quantas posições de deslocamento de caracteres
   quer que a cifra utilize.
 * Inserir uma mensagem (texto) para ser cifrada.
 * Ver o resultado da mensagem cifrada.
 * Inserir uma mensagem (texto) para ser decifrada.
-* Ver o resultado da mensagem decifrada.*/
+* Ver o resultado da mensagem decifrada.-->
 
-### Scripts / Arquivos
+<!--### Scripts / Arquivos
 
 * `README.md`: deve explicar como "deployar", instalar e executar a aplicação,
   assim como uma introdução a aplicação, suas funcionalidades e as decisões que
@@ -156,15 +148,19 @@ _boilerplate_ inclui alguns testes (comentados) que vocês podem usar como ponto
 de partida para implementar o suporte para esses casos.
 
 Também não foi mencionado o que aconteceria com _offset_ negativo. Como parte da
-hacker edition te convidamos a explorar esse caso sozinha.
+hacker edition te convidamos a explorar esse caso sozinha.-->
 
-## 7. Considerações técnicas
+## 4. Considerações técnicas
 
-A lógica do projeto deve estar implementada inteiramente em JavaScript(ES6).
-Nesse projeto **NÃO** está permitido usar bibliotecas ou frameworks, só vanilla
-JavaScript.
+A lógica do projeto foi baseada na Cifra de César - uma das técnicas mais antigas para codificar uma mensagem. É um tipo de cifra por substituição, em que cada letra do texto original é substituída por outra que se encontra há um número fixo de posições (deslocamento) mais a frente do mesmo alfabeto, criando assim mensagens criptografadas. Em uma troca de 1 posição, A se tornaria B, B se tornaria C e assim consecutivamente.
+O projeto foi implementado inteiramente em JavaScript(ES6), HTML5 e CSS.
 
-Você não deve usar a _pseudo-variable_ `this`.
+![](src/ceasar.png)
+
+![](src/diagrama.jpeg)
+
+
+<!--Você não deve usar a _pseudo-variable_ `this`.
 
 Os testes unitários devem cubrir no mínimo de 70% dos _statements_, _functions_
 e _lines_, e um mínimo de 50% de _branches_. O _boilerplate_ já contem o setup e
@@ -314,4 +310,4 @@ Essa seção é para te ajudar a ter um controle do que você precisa completar.
 
 * [ ] Cifrar/decifrar minúsculas.
 * [ ] Cifrar/decifrar _outros_ caractéres (espações, pontuação, `ç`, `á`, ...).
-* [ ] Permitir usar `offset` negativo.
+* [ ] Permitir usar `offset` negativo.-->
